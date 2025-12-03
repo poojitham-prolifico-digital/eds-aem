@@ -1,78 +1,52 @@
 <div 
-  class="hero-banner__main"
+  class="hero-banner"
   data-aue-component="hero-banner"
   data-aue-resource="hero-banner"
   data-aue-resource-type="core/franklin/components/block/v1/block"
 >
 
-  <div class="hero-banner__img-container">
-    <div class="image aem-GridColumn aemGridColumn--default-12">
-      <div class="cmp-image">
+  <!-- BACKGROUND IMAGE -->
+  <picture 
+    class="hero-banner__bg"
+    data-aue-prop="backgroundImage"
+    data-aue-type="reference"
+  >
+    <img data-aue-prop="alt" data-aue-type="text" />
+  </picture>
 
-        <picture data-aue-prop="backgroundImage" data-aue-type="aem-content">
-          <!-- You may add your <source> tags here as static or dynamic later -->
-          <img 
-            alt=""
-            data-aue-prop="alt"
-            data-aue-type="text"
-          />
-        </picture>
 
-      </div>
-    </div>
-  </div>
+  <div class="hero-banner__content">
 
-  <div class="container-fluid wrapper hero-banner__content-container">
-    <div class="wrapper__inner">
+    <!-- TITLE -->
+    <div 
+      class="hero-banner__title"
+      data-aue-prop="title"
+      data-aue-type="richtext"
+    ></div>
 
-      <div class="hero-banner__content">
-        <div class="banner-content banner-content--no-img">
+    <!-- DESCRIPTION -->
+    <div 
+      class="hero-banner__description"
+      data-aue-prop="description"
+      data-aue-type="richtext"
+    ></div>
 
-          <div class="banner-content__main">
+    <!-- CTA BUTTONS -->
+    <div 
+      class="hero-banner__cta"
+      data-aue-prop="buttons"
+      data-aue-type="container"
+    ></div>
 
-            <!-- TITLE -->
-            <div 
-              class="brand-heading"
-              data-aue-prop="title"
-              data-aue-type="richtext"
-            ></div>
+    <!-- ICON IMAGE -->
+    <img 
+      class="hero-banner__icon"
+      data-src=""
+      data-aue-prop="titleIcon"
+      data-aue-type="reference"
+      alt=""
+    />
 
-            <!-- DESCRIPTION -->
-            <div 
-              class="banner-content__desc"
-              data-aue-prop="description"
-              data-aue-type="richtext"
-            ></div>
-
-            <!-- CTA BUTTONS -->
-            <div class="banner-content__cta">
-              <div 
-                data-aue-prop="buttons"
-                data-aue-type="container"
-              >
-                <!-- CTA items inserted by Universal Editor -->
-              </div>
-            </div>
-          </div>
-
-          <!-- TITLE ICON IMAGE -->
-          <div class="banner-content__img">
-            <div class="image aem-GridColumn aemGridColumn--default-12">
-              <div class="cmp-image">
-                <img 
-                  src=""
-                  alt=""
-                  data-aue-prop="titleIcon"
-                  data-aue-type="aem-icon-picker"
-                />
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
   </div>
 
 </div>

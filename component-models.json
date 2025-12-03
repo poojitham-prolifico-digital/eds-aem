@@ -193,7 +193,7 @@
     "id": "hero-banner",
     "fields": [
       {
-        "component": "aem-content",
+        "component": "reference",
         "name": "backgroundImage",
         "label": "Background Image",
         "valueType": "string"
@@ -217,7 +217,7 @@
         "valueType": "string"
       },
       {
-        "component": "aem-icon-picker",
+        "component": "reference",
         "name": "titleIcon",
         "label": "Title Icon",
         "valueType": "string"
