@@ -255,5 +255,44 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "herobanner",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "backgroundMedia",
+        "label": "Background Image / Video",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "iconImage",
+        "label": "Icon Image (optional)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "text-multi",
+        "name": "ctaLabel",
+        "label": "CTA Label",
+        "multi": true
+      },
+      {
+        "component": "aem-content-multi",
+        "name": "ctaLink",
+        "label": "CTA Link",
+        "multi": true
+      }
+    ]
   }
 ]
