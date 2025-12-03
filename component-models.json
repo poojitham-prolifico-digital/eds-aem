@@ -190,6 +190,47 @@
     ]
   },
   {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "image",
+        "name": "backgroundImage",
+        "valueType": "string",
+        "label": "Background Image"
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "valueType": "string",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "valueType": "string",
+        "label": "Description"
+      },
+      {
+        "component": "text",
+        "name": "alt",
+        "valueType": "string",
+        "label": "Alt Text"
+      },
+      {
+        "component": "image",
+        "name": "titleIcon",
+        "valueType": "string",
+        "label": "Title Icon"
+      },
+      {
+        "component": "container",
+        "name": "buttons",
+        "valueType": "array",
+        "label": "CTA Buttons"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
