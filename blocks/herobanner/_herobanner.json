@@ -37,12 +37,6 @@
           "name": "description",
           "label": "Description"
         },
-        {
-          "component": "container",
-          "name": "buttons",
-          "label": "CTA Buttons",
-          "valueType": "array"
-        },
      {
                     "component": "aem-content",
                     "name": "textContent_cta",
