@@ -16,51 +16,49 @@
       }
     }
   ],
-
   "models": [
     {
       "id": "hero-banner",
       "fields": [
         {
-          "component": "image",
+          "component": "aem-content",
           "name": "backgroundImage",
-          "valueType": "string",
-          "label": "Background Image"
-        },
-        {
-          "component": "richtext",
-          "name": "title",
-          "valueType": "string",
-          "label": "Title"
-        },
-        {
-          "component": "richtext",
-          "name": "description",
-          "valueType": "string",
-          "label": "Description"
+          "label": "Background Image",
+          "valueType": "string"
         },
         {
           "component": "text",
           "name": "alt",
-          "valueType": "string",
-          "label": "Alt Text"
+          "label": "Alt Text",
+          "valueType": "string"
         },
         {
-          "component": "image",
+          "component": "richtext",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "description",
+          "label": "Description",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-icon-picker",
           "name": "titleIcon",
-          "valueType": "string",
-          "label": "Title Icon"
+          "label": "Title Icon",
+          "valueType": "string"
         },
         {
           "component": "container",
           "name": "buttons",
-          "valueType": "array",
-          "label": "CTA Buttons"
+          "label": "CTA Buttons",
+          "valueType": "array"
         }
       ]
     }
   ],
-
   "filters": [
     {
       "id": "hero-banner",

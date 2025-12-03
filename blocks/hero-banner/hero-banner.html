@@ -1,54 +1,20 @@
-<sly 
-  data-sly-use.heroBanner="com.wrenchgroup.core.components.models.HeroBanner"
-  data-sly-use.component="com.adobe.cq.wcm.core.components.models.Component"
-  data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
-  id="${component.id}"
-  data-cmp-data-layer="${heroBanner.data.json}" 
-/>
-
 <div 
-  class="hero-banner__main ${heroBanner.classes}"
-  style="${heroBanner.backgroundColor @ context='styleString'}"
-
+  class="hero-banner__main"
   data-aue-component="hero-banner"
-  data-aue-resource="${resource.path}"
+  data-aue-resource=""
 >
 
   <div class="hero-banner__img-container">
     <div class="image aem-GridColumn aemGridColumn--default-12">
       <div class="cmp-image">
 
-        <picture 
-          data-aue-prop="backgroundImage"
-          data-aue-type="image"
-        >
-          <sly data-sly-test="${heroBanner.smartCropSwatches && heroBanner.isSmartCropEnabled && heroBanner.smartCropSwatches.size > 0}">
-            <sly data-sly-list="${heroBanner.smartCropSwatches}">
-              <source 
-                media="(min-width: ${item.imageWidth}px)"
-                srcset="${item.imageURL}"
-                height="${item.imageHeight}" />
-            </sly>
-          </sly>
-
-          <sly data-sly-test="${!heroBanner.isSmartCropEnabled || heroBanner.smartCropSwatches.size == 0}">
-            <source media="(min-width: 1440px)" src="${heroBanner.fileReference}&bfc=on&dpr=on&wid=1920" height="418">
-            <source media="(min-width: 1200px)" src="${heroBanner.fileReference}&bfc=on&dpr=on&wid=1440" height="400">
-            <source media="(min-width: 992px)"  src="${heroBanner.fileReference}&bfc=on&dpr=on&wid=1200" height="320">
-            <source media="(min-width: 768px)"  src="${heroBanner.fileReference}&bfc=on&dpr=on&wid=992"   height="316">
-            <source media="(min-width: 0px)"    src="${heroBanner.fileReference}&bfc=on&dpr=on&wid=768"  height="240">
-          </sly>
-
+        <picture data-aue-prop="backgroundImage" data-aue-type="image">
+          <!-- You may add your <source> tags here as static or dynamic later -->
           <img 
-            src="${heroBanner.fileReference}&bfc=on&dpr=on"
-            decoding="async" 
-            fetchpriority="high" 
-            loading="eager"
-            alt="${heroBanner.alt || true}"
-
+            alt=""
             data-aue-prop="alt"
             data-aue-type="text"
-          >
+          />
         </picture>
 
       </div>
@@ -58,17 +24,8 @@
   <div class="container-fluid wrapper hero-banner__content-container">
     <div class="wrapper__inner">
 
-      <sly 
-        data-sly-test.hasImage="${heroBanner.imageIconPath ? 'banner-content--has-img' : 'banner-content--no-img'}"
-        data-sly-test.hasContent="${heroBanner.title || heroBanner.description || heroBanner.listOfButtons}"
-      />
-
-      <div 
-        data-sly-test="${hasContent}" 
-        class="hero-banner__content" 
-        id="${component.id}"
-      >
-        <div class="banner-content ${hasImage}">
+      <div class="hero-banner__content">
+        <div class="banner-content banner-content--no-img">
 
           <div class="banner-content__main">
 
@@ -77,59 +34,36 @@
               class="brand-heading"
               data-aue-prop="title"
               data-aue-type="richtext"
-            >
-              ${heroBanner.title @context='html'}
-            </div>
+            ></div>
 
             <!-- DESCRIPTION -->
             <div 
-              data-sly-test="${heroBanner.description}" 
               class="banner-content__desc"
               data-aue-prop="description"
               data-aue-type="richtext"
-            >
-              ${heroBanner.description @context='html'}
-            </div>
+            ></div>
 
             <!-- CTA BUTTONS -->
-            <div 
-              data-sly-test="${heroBanner.listOfButtons}" 
-              class="banner-content__cta"
-            >
-
+            <div class="banner-content__cta">
               <div 
                 data-aue-prop="buttons"
                 data-aue-type="container"
               >
-                <sly data-sly-list.btnItem="${heroBanner.listOfButtons}">
-                  <sly 
-                    data-sly-test.parName="${btnItem}"
-                  />
-                  <sly 
-                    data-sly-resource="${@path=btnItem, resourceType='wrenchgroup/components/content/atoms/cta/v1/cta', decoration=true}"
-                  />
-                </sly>
+                <!-- CTA items inserted by Universal Editor -->
               </div>
-
             </div>
-
           </div>
 
-          <!-- TITLE ICON -->
-          <div 
-            data-sly-test="${heroBanner.imageIconPath}" 
-            class="banner-content__img"
-          >
+          <!-- TITLE ICON IMAGE -->
+          <div class="banner-content__img">
             <div class="image aem-GridColumn aemGridColumn--default-12">
               <div class="cmp-image">
                 <img 
-                  loading="eager" 
-                  fetchpriority="high" 
-                  src="${heroBanner.imageIconPath}"
-
+                  src=""
+                  alt=""
                   data-aue-prop="titleIcon"
                   data-aue-type="image"
-                >
+                />
               </div>
             </div>
           </div>
@@ -141,5 +75,3 @@
   </div>
 
 </div>
-
-<sly data-sly-call="${templates.placeholder @ isEmpty=!heroBanner.title}"></sly>
