@@ -190,47 +190,6 @@
     ]
   },
   {
-    "id": "hero-banner",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "backgroundImage",
-        "label": "Background Image",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "alt",
-        "label": "Alt Text",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "title",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "label": "Description",
-        "valueType": "string"
-      },
-      {
-        "component": "reference",
-        "name": "titleIcon",
-        "label": "Title Icon",
-        "valueType": "string"
-      },
-      {
-        "component": "container",
-        "name": "buttons",
-        "label": "CTA Buttons",
-        "valueType": "array"
-      }
-    ]
-  },
-  {
     "id": "hero",
     "fields": [
       {
@@ -261,14 +220,8 @@
     "fields": [
       {
         "component": "aem-content",
-        "name": "backgroundMedia",
-        "label": "Background Image / Video",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "iconImage",
-        "label": "Icon Image (optional)",
+        "name": "backgroundImage",
+        "label": "Background Image/video",
         "valueType": "string"
       },
       {
@@ -282,16 +235,10 @@
         "label": "Description"
       },
       {
-        "component": "text-multi",
-        "name": "ctaLabel",
-        "label": "CTA Label",
-        "multi": true
-      },
-      {
-        "component": "aem-content-multi",
-        "name": "ctaLink",
-        "label": "CTA Link",
-        "multi": true
+        "component": "container",
+        "name": "buttons",
+        "label": "CTA Buttons",
+        "valueType": "array"
       }
     ]
   }
