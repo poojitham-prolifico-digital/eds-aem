@@ -4,8 +4,8 @@ export default function decorate(block) {
   const title = block.querySelector('[data-aue-prop="title"]')?.innerHTML || '';
   const description = block.querySelector('[data-aue-prop="description"]')?.innerHTML || '';
 
-const ctaLink = block.querySelector('[data-aue-prop="textContent_cta"]')?.getAttribute('href') || '';
-const ctaLabel = block.querySelector('[data-aue-prop="textContent_ctaText"]')?.innerText || '';
+  const ctaLink = block.querySelector('[data-aue-prop="textContent_cta"]')?.href || '';
+  const ctaLabel = block.querySelector('[data-aue-prop="textContent_ctaText"]')?.innerText || '';
   // build your original AEM-style hero banner HTML
   const html = `
 <div class="container responsivegrid hero-banner container--default-width hero-banner--large-height hero-banner--content-left">
