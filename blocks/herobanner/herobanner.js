@@ -1,8 +1,7 @@
 
 export default function decorate(block) {
   const background = block.querySelector('[data-aue-prop="backgroundImage"] ')?.src;
-  const title = block.querySelector('[data-aue-prop="title"]')?.innerHTML || '';
-  const description = block.querySelector('[data-aue-prop="description"]')?.innerHTML || '';
+
 
 const ctaLink = block.querySelector('[data-aue-prop="textContent_cta"]')?.getAttribute('href') || '';
 const ctaLabel = block.querySelector('[data-aue-prop="textContent_ctaText"]')?.innerText || '';
