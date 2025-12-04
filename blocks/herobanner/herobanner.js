@@ -4,12 +4,9 @@ export default function decorate(block) {
   const title = block.querySelector('[data-aue-prop="title"]')?.innerHTML || '';
   const description = block.querySelector('[data-aue-prop="description"]')?.innerHTML || '';
 
-  // CTA buttons array (each div is one item)
-  const buttons = [...block.querySelectorAll('[data-aue-item]')].map(item => {
-    const label = item.querySelector('[data-aue-prop="label"]')?.innerText || '';
-    const link = item.querySelector('[data-aue-prop="link"]')?.value || '';
-    return { label, link };
-  });
+
+const ctaLink = block.querySelector('[data-aue-prop="textContent_cta"]')?.getAttribute('href') || '';
+const ctaLabel = block.querySelector('[data-aue-prop="textContent_ctaText"]')?.innerText || '';
 
   // build your original AEM-style hero banner HTML
   const html = `
@@ -33,11 +30,11 @@ export default function decorate(block) {
               <div class="brand-heading">${title}</div>
               <div class="banner-content__desc">${description}</div>
               <div class="banner-content__cta">
-                ${buttons.map(b => `
-                  <a class="cta button a-button a-button--primary a-button--md" href="${b.link}">
-                    ${b.label}
-                  </a>
-                `).join('')}
+                ${ctaLabel && ctaLink ? `
+                <a class="cta button a-button a-button--primary a-button--md" href="${ctaLink}">
+                  ${ctaLabel}
+                </a>
+              ` : ''}
               </div>
             </div>
           </div>
