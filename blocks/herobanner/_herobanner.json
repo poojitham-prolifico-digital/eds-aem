@@ -16,7 +16,6 @@
       }
     }
   ],
-
   "models": [
     {
       "id": "herobanner",
@@ -24,11 +23,11 @@
         {
           "component": "aem-content",
           "name": "backgroundImage",
-          "label": "Background Image/video",
+          "label": "Background Image / Video",
           "valueType": "string"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "title",
           "label": "Title"
         },
@@ -37,21 +36,32 @@
           "name": "description",
           "label": "Description"
         },
-     {
-                    "component": "aem-content",
-                    "name": "textContent_cta",
-                    "label": "CTA",
-                    "valueType": "string"
-                },
-                {
-                    "component": "text",
-                    "name": "textContent_ctaText",
-                    "label": "CTA label",
-                    "valueType": "string"
-                }
+        {
+          "component": "collection",
+          "name": "buttons",
+          "label": "CTA Buttons",
+          "valueType": "array",
+          "models": ["ctaButton"]
+        }
+      ]
+    },
+    {
+      "id": "ctaButton",
+      "fields": [
+        {
+          "component": "text",
+          "name": "label",
+          "label": "Button Label"
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Button Link",
+          "valueType": "string"
+        }
       ]
     }
   ],
-
+  
   "filters": []
 }
