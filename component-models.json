@@ -247,5 +247,36 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "herobannerv3",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "backgroundImage",
+        "label": "Background Image / Video",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "eyebrow",
+        "label": "Eyebrow"
+      },
+      {
+        "component": "richtext",
+        "name": "title",
+        "label": "Title"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "CTA"
+      }
+    ]
   }
 ]
