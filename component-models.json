@@ -276,6 +276,118 @@
         "component": "aem-content",
         "name": "cta",
         "label": "CTA"
+      },
+      {
+        "component": "multiselect",
+        "name": "hideTextOptions",
+        "label": "Hide Text Options",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Hide Text Block",
+            "value": "hero-marquee--hide-text-block"
+          },
+          {
+            "name": "Hide Text Background",
+            "value": "hero-marquee--hide-text-bg"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "textBlockLocation",
+        "label": "Text Block Location",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Left",
+            "value": "hero-marquee--left"
+          },
+          {
+            "name": "Center",
+            "value": "hero-marquee--center"
+          },
+          {
+            "name": "Right",
+            "value": "hero-marquee--right"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "heroBannerHeight",
+        "label": "Hero Banner Height",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Tall",
+            "value": "hero-marquee--tall"
+          },
+          {
+            "name": "Medium",
+            "value": "hero-marquee--medium"
+          },
+          {
+            "name": "Short",
+            "value": "hero-marquee--short"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "cta1Color",
+        "label": "CTA 1 Color Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "hero-marquee--cta1-primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "hero-marquee--cta1-secondary"
+          },
+          {
+            "name": "Tertiary",
+            "value": "hero-marquee--cta1-tertiary"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "cta2Color",
+        "label": "CTA 2 Color Style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Primary",
+            "value": "hero-marquee--cta2-primary"
+          },
+          {
+            "name": "Secondary",
+            "value": "hero-marquee--cta2-secondary"
+          },
+          {
+            "name": "Tertiary",
+            "value": "hero-marquee--cta2-tertiary"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "textColor",
+        "label": "Text Color",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Light",
+            "value": "text--color-light"
+          },
+          {
+            "name": "Dark",
+            "value": "text--color-dark"
+          }
+        ]
       }
     ]
   }
